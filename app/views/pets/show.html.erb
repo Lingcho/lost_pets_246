@@ -1,0 +1,10 @@
+<h2><%= @pet.name %></h2>
+
+<p>Trouvé au : <%= @pet.address %></p>
+<p>Espèce : <%= @pet.species %></p>
+<p>Trouvé le : <%= @pet.found_on %></p>
+
+<%= link_to 'Modifier les infos', edit_pet_path(@pet) %>
+<%= link_to "Supprimer l'animal", pet_path(@pet), method: :delete %>
+
+<%= link_to 'Retour à la liste des animaux', pets_path %>

@@ -1,0 +1,9 @@
+
+
+<%= simple_form_for pet do |f| %>
+  <%= f.input :name, label: "Nom de l'animal", error: 'Username is mandatory, please specify one' %>
+  <%= f.input :address, hint: 'No special characters.' %>
+  <%= f.input :species, collection: Pet::SPECIES %>
+  <%= f.input :found_on, as: :date, html5: true %>
+  <%= f.button :submit %>
+<% end %>

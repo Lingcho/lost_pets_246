@@ -1,0 +1,13 @@
+<h1>Tous les animaux disparus</h1>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <p>
+        <%= link_to pet.name, pet_path(pet) %> trouvé il y a <%= pet.found_days_ago %> jours
+      </p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Déclarer un animal trouvé', new_pet_path, class: 'btn btn-success' %>
